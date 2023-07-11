@@ -22,18 +22,20 @@ players_slug_list = list(df['player_name'].unique())
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = Dash(__name__,external_stylesheets=external_stylesheets)
+# Declare server for Heroku deployment. Needed for Procfile.
+server = app.server
 app.layout = html.Div(children=[
     html.H1(
         children='Player Rankings',
         style={
             'textAlign': 'center',
-            
+
         }
     ),#end of H1
     html.Div([dcc.Dropdown(options=players_slug_list,
         id='player_dropdown',
         value=players_slug_list[0]
-        
+
     ),
     dcc.Graph(id='player_progression'),
              ])])
