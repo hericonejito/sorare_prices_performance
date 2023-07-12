@@ -80,8 +80,8 @@ def update_figure(selected_player,gw_number):
     # fig = px.scatter(temp_df, x="date", y="tenGameAverage")
     # fig = px.scatter(temp_df, x="date", y="score")
     # for gw,gw_starts in gw_start.items():
-    fig.add_vline(x=gw_start[f'nba-gameweek-{gw_number}'],line_width=2, line_dash='dash')
-    fig.add_vline(x=gw_start[f'nba-gameweek-{gw_number+1}'],line_width=2, line_dash='dash')
+    fig.add_vline(x=gw_start[f'nba-gameweek-{gw_number}'],line_width=1, line_dash='dash')
+    fig.add_vline(x=gw_start[f'nba-gameweek-{gw_number+1}'],line_width=1, line_dash='dash')
     fig.update_yaxes(title_text="<b>Price in Euro</b>", secondary_y=False)
     fig.update_yaxes(title_text="<b>Score and Cap</b>", secondary_y=True)
     # fig.update_layout(transition_duration=500)
