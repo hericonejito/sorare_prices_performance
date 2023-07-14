@@ -1,6 +1,6 @@
 from dash import Dash, html, dcc
 import dash
-
+import sklearn
 app = Dash(__name__, use_pages=True)
 
 app.layout = html.Div([
