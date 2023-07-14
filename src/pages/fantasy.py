@@ -1,25 +1,16 @@
 import dash
-from basketball_reference_scraper.constants import TEAM_TO_TEAM_ABBR as teams
-from bs4 import BeautifulSoup
-from bs4 import Comment
-import requests
+
 import pandas as pd
 import json
 import plotly.express as px
 from dash import callback
-from jupyter_dash import JupyterDash
-import dash_core_components as dcc
-import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_table
 import numpy as np
 import dash_core_components as dcc
 import dash_html_components as html
-import os
 from dash_table.Format import Format, Scheme, Sign, Symbol
 from datetime import datetime as dt
-import time
-import plotly.graph_objects as go
 from sklearn.cluster import KMeans
 dash.register_page(__name__)
 # Load Data
